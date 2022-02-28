@@ -5,7 +5,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             fastest += 1
             if (fastest == 1) {
                 radio.sendNumber(receivedNumber)
-                led.toggle(3, 4)
+                led.toggle(4, 4)
                 basic.pause(5000)
             }
             alreadyThere = 1
@@ -21,9 +21,6 @@ radio.onReceivedNumber(function (receivedNumber) {
 input.onButtonPressed(Button.A, function () {
     fastest = 0
     led.toggle(4, 4)
-    basic.pause(100)
-    led.toggle(4, 4)
-    led.toggle(3, 4)
 })
 function plotLEDs () {
     led.plot(x, y)
